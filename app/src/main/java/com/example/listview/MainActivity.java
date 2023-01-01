@@ -7,19 +7,23 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 private ListView listView1;
+private Spinner spinnerId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         listView1 = findViewById(R.id.listView1);
+        spinnerId = findViewById(R.id.spinnerId);
         ArrayList<String> arr = new ArrayList<>();
+        ArrayList<String> arrSpinner = new ArrayList<>();
 
         arr.add("Vishal");
         arr.add("Pandey");
@@ -56,5 +60,13 @@ private ListView listView1;
                 }
             }
         });
+
+        arrSpinner.add("VoterId");
+        arrSpinner.add("Addhar Card");
+        arrSpinner.add("Driving Licence");
+        arrSpinner.add("PAN Card");
+
+        ArrayAdapter<String> spinadapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,arrSpinner);
+        spinnerId.setAdapter(spinadapter);
     }
 }

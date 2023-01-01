@@ -11,6 +11,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/listView1"
+        android:visibility="gone"
         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Id"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerId"
+            />
+    </LinearLayout>
 
 </LinearLayout>
