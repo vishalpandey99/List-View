@@ -34,4 +34,15 @@
             />
     </LinearLayout>
 
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:hint="Search Here..."
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:id="@+id/autoComplete"
+        />
+
 </LinearLayout>
